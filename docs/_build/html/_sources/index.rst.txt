@@ -6,15 +6,21 @@
 Welcome to SUMO Modular Framework's documentation!
 ==================================================
 
+Guide
+^^^^^
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+  
+   introduction
+   simulation
+   environment
+   reinforcement_learning
+   modules
 
 
+.. Indices and tables
+.. ==================
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

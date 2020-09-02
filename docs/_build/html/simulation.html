@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to SUMO Modular Framework’s documentation! &mdash; SUMO Modular Framework  documentation</title>
+  <title>Simulation &mdash; SUMO Modular Framework  documentation</title>
   
 
   
@@ -36,7 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" /> 
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Environment" href="environment.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +51,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> SUMO Modular Framework
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> SUMO Modular Framework
           
 
           
@@ -81,11 +82,15 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="environment.html">Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reinforcement_learning.html">Reinforcement Learning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#map">Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#routes-and-flows">Routes and Flows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#emissions">Emissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 </ul>
 
@@ -102,7 +107,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">SUMO Modular Framework</a>
+          <a href="index.html">SUMO Modular Framework</a>
         
       </nav>
 
@@ -131,15 +136,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Welcome to SUMO Modular Framework’s documentation!</li>
+      <li>Simulation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/simulation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -152,32 +157,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-sumo-modular-framework-s-documentation">
-<h1>Welcome to SUMO Modular Framework’s documentation!<a class="headerlink" href="#welcome-to-sumo-modular-framework-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="guide">
-<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html#map">Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html#routes-and-flows">Routes and Flows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html#emissions">Emissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html#configuration">Configuration</a></li>
+  <div class="section" id="simulation">
+<h1>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h1>
+<p>To create a custom simulation, these files are required to be in the root location of the simulation:</p>
+<ul class="simple">
+<li><p><strong>osm.net.xml:</strong> Defines the properties of the map.</p></li>
+<li><p><strong>generated/routes.xml:</strong> Specifies the vehicle routes</p></li>
+<li><p><strong>generated/flows.xml:</strong> Specifies the flows for each routes</p></li>
+<li><p><strong>polys.add.xml:</strong>  Defines the cell shapes</p></li>
+<li><p><strong>districts.taz.xml:</strong> Specifies which edges belong to which cell</p></li>
+<li><p><strong>config.ini:</strong> Defines the configuration of the simulation</p></li>
+<li><p><strong>osm.poly.add.xml (optional):</strong> Contains the background information</p></li>
+<li><p><strong>data/induction_loops.add.xml (optional):</strong> Simulation induction loop output</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="environment.html">Environment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="environment.html#environment-base-class">Environment Base Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment.html#example-environment">Example Environment</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="reinforcement_learning.html">Reinforcement Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modules.html#creating-a-module">Creating a module</a></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="map">
+<h2>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">The map specifies all the properties of the simulated map environment. It defines the roads, crossroads, vehicle permissions, etc.</div>
+<div class="line">This map can be created by different means. One is by using the <em>netedit</em> tool, which is a GUI program that allows you to manually create and edit the map. Another one is to generate from OpenStreetsMap. The easiest solution is to use the <a class="reference external" href="https://sumo.dlr.de/docs/Tools/Import/OSM.html">osmWebWizard.py script</a>.</div>
 </div>
+</div>
+<div class="section" id="routes-and-flows">
+<h2>Routes and Flows<a class="headerlink" href="#routes-and-flows" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="emissions">
+<h2>Emissions<a class="headerlink" href="#emissions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -189,8 +196,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="environment.html" class="btn btn-neutral float-left" title="Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
