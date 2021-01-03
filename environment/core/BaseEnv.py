@@ -106,10 +106,10 @@ class SumoBaseEnvironment:
             "0.25",
             "--device.rerouting.period",
             "10",
-            "--device.rerouting.synchronize",
-            "True",
-            "--device.rerouting.threads",
-            "4",
+            # "--device.rerouting.synchronize",
+            # "True",
+            # "--device.rerouting.threads",
+            # "4",
         ]
 
         additionals = []

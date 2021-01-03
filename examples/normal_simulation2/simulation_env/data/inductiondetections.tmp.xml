@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sun Jan  3 21:43:16 2021 by 
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/Configuration.xsd">
+
+    <input>
+        <net-file value="examples/normal_simulation2/simulation_env/osm.net.xml"/>
+        <additional-files value="examples/normal_simulation2/simulation_env/generated/routes.xml,examples/normal_simulation2/simulation_env/generated/flows.xml,examples/normal_simulation2/simulation_env/data/induction_loops.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <step-length value="10"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport value="-1"/>
+        <waiting-time-memory value="10000"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.probability value="0.25"/>
+        <device.rerouting.period value="10"/>
+    </routing>
+
+    <report>
+        <no-warnings value="true"/>
+        <duration-log.disable value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <gui_only>
+        <tracker-interval value="10"/>
+    </gui_only>
+
+</configuration>
